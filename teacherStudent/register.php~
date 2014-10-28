@@ -1,0 +1,33 @@
+<html>
+<body>
+
+<?php
+$con=mysql_connect('localhost','root','gc085475');
+// Check connection
+if (mysqli_connect_errno()) {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+} 
+mysql_select_db('teacherStudent',$con);
+	
+	$firstname =  $_POST['firstname'];
+	$lastname = $_POST['lastname'];
+	$email = $_POST['email'];
+	$password= $_POST['password'];
+	$role = $_POST['role'];
+	$age =  $_POST['age'];
+	
+$sql="INSERT INTO user (firstname,lastname,email,password,role,age)
+VALUES ('$firstname', '$lastname', '$email','$password','$role', '$age')";
+$res=mysql_query($sql);
+if($res)
+{
+	echo "inserted successfully ";
+}
+
+echo "1 record added";
+
+mysqli_close($con);
+?>
+
+	</body>
+<html>
