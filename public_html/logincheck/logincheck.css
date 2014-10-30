@@ -8,6 +8,7 @@ body
 	font-family:Verdana,Geneva,sans-serif;
         font-size:24px;
         color:#9933CC;
+	
 
 }
 #container
@@ -38,7 +39,6 @@ body
 	width:650px;
         height:50px;
 	color:#fff;
-	background-color:#d45;
 	float:left;
 	font-size:36px;
 
@@ -50,16 +50,10 @@ body
 	width:380px;
 	color:#fff;
 	float:right;
-        background-color:#c13;
 
 }
-#loginveri
+#holder
 {
-        height:50px;
-        width:300px;
-        color:#fff;
-        float:right;
-        background-color:#c13;
-
+	height:400px;
+	width:1200px;
 }
-

@@ -79,7 +79,7 @@ $_SESSION["email"] = "{$row['email']}";
 $_SESSION["password"] = "{$row['password']}";
 $_SESSION["role"] = "{$row['role']}";
 $_SESSION["age"] = "{$row['age']}";
-//echo "userid is".$_SESSION["userid"];
+echo "userid is".$_SESSION["userid"];
 
 }
 
