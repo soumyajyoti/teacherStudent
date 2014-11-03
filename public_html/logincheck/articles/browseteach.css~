@@ -1,0 +1,58 @@
+#banner
+{
+	width:1300px;
+	height:50px;
+	background-color:#000;
+}
+#main
+{
+	height:600px;
+	width:1300px;
+        background-color: #2F2727; 
+	background-image: url(images/radial_bg.png);
+	background-position: center center;
+        background-repeat: no-repeat; 
+
+
+	 background: -webkit-gradient(radial, center center, 0, center center, 4	 60, from(#1a82f7), to(#2F2727));
+  	 background: -webkit-radial-gradient(circle, #1a82f7, #2F2727);
+	 background: -moz-radial-gradient(circle, #1a82f7, #2F2727);
+	 background: -ms-radial-gradient(circle, #1a82f7, #2F2727);
+}
+
+#top
+{
+	width:1300px;
+	height:50px;
+	background-color:#ffffff;
+}
+
+#left
+{
+	width:200px;
+	height:400px;
+	background-color:#aadd34;
+	float:left;
+}
+
+#secondleft
+{
+	width:900px;
+	height:400px;
+	background-color:#a347db;
+	float:left;
+}
+
+#right
+{
+	width:200px;
+	height:400px;
+	background-color:#acd214;
+	float:left;
+}
+#down
+{
+	width:1300px;
+	height:50px;
+	background-color:#000000;
+}
