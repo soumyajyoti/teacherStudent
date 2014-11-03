@@ -8,7 +8,14 @@
 <script src="js/h5utils.js"></script>
 </head>
 <body vlink="#ffff00" alink="#ffff00" link="#ffff00">
-
+<?php
+session_start();
+if(!isset($_SESSION['userid']))
+	{
+ 
+    header("Location://iamrana.com/index.php");
+	}
+?>
 
 <?php
 
