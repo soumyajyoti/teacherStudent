@@ -1,0 +1,176 @@
+#banner
+
+{
+	width:1300px;
+	height:50px;
+	background-color:#000;
+}
+#main
+{
+	height:600px;
+	width:1300px;
+        background-color: #2F2727; 
+	background-image: url(images/radial_bg.png);
+	background-position: center center;
+        background-repeat: no-repeat; 
+
+
+	 background: -webkit-gradient(radial, center center, 0, center center, 4	 60, from(#1a82f7), to(#2F2727));
+  	 background: -webkit-radial-gradient(circle, #1a82f7, #2F2727);
+	 background: -moz-radial-gradient(circle, #1a82f7, #2F2727);
+	 background: -ms-radial-gradient(circle, #1a82f7, #2F2727);
+	
+}
+#aa
+{
+	height:40px;
+	width:1000px;
+	font-family:"Lucida Console", Monaco, monospace;
+	font-size:20px;
+	color:#FFFFFF;
+	 background: -webkit-gradient(radial, center center, 0, center center, 4	 60, from(#000000), to(	#1A0000));
+  	 background: -webkit-radial-gradient(circle, 	#000000, 	#1A0000);
+	 background: -moz-radial-gradient(circle, 	#000000, 	#1A0000);
+	 background: -ms-radial-gradient(circle, 	#000000, 	#1A0000);
+	 -moz-border-radius: 4px;
+         -webkit-border-radius: 4px;
+         border-radius: 4px;
+	-webkit-box-shadow: 0 2px 2px 0 #C2C2C2;
+	box-shadow: 0 8px 8px 10px 	#00CC00;
+}
+#bb
+{
+	height:40px;
+	width:1000px;
+	font-family:"Lucida Console", Monaco, monospace;
+	font-size:15px;
+	color:#FF0066;
+	 background: -webkit-gradient(radial, center center, 0, center center, 4	 60, from(#330000), to(		#4C0000));
+  	 background: -webkit-radial-gradient(circle, 	#330000, 		#4C0000);
+	 background: -moz-radial-gradient(circle, 	#330000, 		#4C0000);
+	 background: -ms-radial-gradient(circle, 	#330000, 		#4C0000);
+	-moz-border-radius: 4px;
+         -webkit-border-radius: 4px;
+         border-radius: 4px;
+	-webkit-box-shadow: 0 2px 2px 0 #C2C2C2;
+	box-shadow: 0 8px 8px 10px 		#00CC00;
+}
+#cc
+{
+	height:40px;
+	width:1000px;
+	font-family:"Lucida Console", Monaco, monospace;
+	font-size:15px;
+	color:#FF0066;
+	 background: -webkit-gradient(radial, center center, 0, center center, 4	 60, from(	#660000), to(		#800000));
+  	 background: -webkit-radial-gradient(circle, 		#660000, 		#800000);
+	 background: -moz-radial-gradient(circle, 		#660000, 		#800000);
+	 background: -ms-radial-gradient(circle, 		#660000, 		#800000);
+	-moz-border-radius: 4px;
+         -webkit-border-radius: 4px;
+         border-radius: 4px;
+	-webkit-box-shadow: 0 2px 2px 0 #C2C2C2;
+	box-shadow: 0 8px 8px 10px 	#00CC00;
+}
+#dd
+{
+	height:40px;
+	width:1000px;
+	font-family:"Lucida Console", Monaco, monospace;
+	font-size:15px;
+	color:#FF0066;
+	 background: -webkit-gradient(radial, center center, 0, center center, 4	 60, from(#990000), to(	#B20000));
+  	 background: -webkit-radial-gradient(circle, 	#990000, 	#B20000);
+	 background: -moz-radial-gradient(circle, 	#990000, 	#B20000);
+	 background: -ms-radial-gradient(circle, 	#990000, 	#B20000);
+	-moz-border-radius: 4px;
+         -webkit-border-radius: 4px;
+         border-radius: 4px;
+	-webkit-box-shadow: 0 2px 2px 0 #C2C2C2;
+	box-shadow: 0 8px 8px 10px 		#00CC00;
+}
+#ee
+{
+	height:40px;
+	width:1000px;
+	font-family:"Lucida Console", Monaco, monospace;
+	font-size:15px;
+	color:#FF0066;
+	 background: -webkit-gradient(radial, center center, 0, center center, 4	 60, from(#CC0000), to(	#E60000));
+  	 background: -webkit-radial-gradient(circle, 	#CC0000, 	#E60000);
+	 background: -moz-radial-gradient(circle, 	#CC0000, 	#E60000);
+	 background: -ms-radial-gradient(circle, 	#CC0000, 	#E60000);
+	-moz-border-radius: 4px;
+         -webkit-border-radius: 4px;
+         border-radius: 4px;
+	-webkit-box-shadow: 0 2px 2px 0 #C2C2C2;
+	box-shadow: 0 8px 8px 10px 	#00CC00;
+}
+#ff
+{
+	height:40px;
+	width:1000px;
+	font-family:"Lucida Console", Monaco, monospace;
+	font-size:15px;
+	color:#FFFFFF;
+	 background: -webkit-gradient(radial, center center, 0, center center, 4	 60, from(#FF0000), to(		#FF1919));
+  	 background: -webkit-radial-gradient(circle, 	#FF0000, 		#FF1919);
+	 background: -moz-radial-gradient(circle, 	#FF0000, 		#FF1919);
+	 background: -ms-radial-gradient(circle, 	#FF0000, 		#FF1919);
+	-moz-border-radius: 4px;
+         -webkit-border-radius: 4px;
+         border-radius: 4px;
+	-webkit-box-shadow: 0 2px 2px 0 #C2C2C2;
+	box-shadow: 0 8px 8px 10px 	#00CC00;
+}
+#gg
+{
+	height:40px;
+	width:1000px;
+	font-family:"Lucida Console", Monaco, monospace;
+	font-size:15px;
+	color:	#FFFFFF;
+	 background: -webkit-gradient(radial, center center, 0, center center, 4	 60, from(#FF3333), to(	#FF4D4D));
+  	 background: -webkit-radial-gradient(circle, 	#FF3333, 	#FF4D4D);
+	 background: -moz-radial-gradient(circle, 	#FF3333, 	#FF4D4D);
+	 background: -ms-radial-gradient(circle, 	#FF3333, 	#FF4D4D);
+	-moz-border-radius: 4px;
+         -webkit-border-radius: 4px;
+         border-radius: 4px;
+	-webkit-box-shadow: 0 2px 2px 0 #C2C2C2;
+	box-shadow: 0 8px 8px 10px 	#00CC00;
+}
+#hh
+{
+	height:40px;
+	width:1000px;
+	font-family:"Lucida Console", Monaco, monospace;
+	font-size:15px;
+	color:#FFFFFF;
+	 background: -webkit-gradient(radial, center center, 0, center center, 4	 60, from(	#FF6666), to(	#FF8080));
+  	 background: -webkit-radial-gradient(circle, 		#FF6666, 	#FF8080);
+	 background: -moz-radial-gradient(circle, 		#FF6666, 	#FF8080);
+	 background: -ms-radial-gradient(circle, 		#FF6666, 	#FF8080);
+	-moz-border-radius: 4px;
+         -webkit-border-radius: 4px;
+         border-radius: 4px;
+	-webkit-box-shadow: 0 2px 2px 0 #C2C2C2;
+	box-shadow: 0 8px 8px 10px 	#00CC00;
+}
+#ii
+{
+	height:40px;
+	width:1000px;
+	font-family:"Lucida Console", Monaco, monospace;
+	font-size:15px;
+	color:#FFFFFF;
+	 background: -webkit-gradient(radial, center center, 0, center center, 4	 60, from(	#FF9999), to(		#FFB2B2));
+  	 background: -webkit-radial-gradient(circle, 		#FF9999, 		#FFB2B2);
+	 background: -moz-radial-gradient(circle, 		#FF9999, 		#FFB2B2);
+	 background: -ms-radial-gradient(circle, 		#FF9999, 		#FFB2B2);
+	-moz-border-radius: 4px;
+         -webkit-border-radius: 4px;
+         border-radius: 4px;
+	-webkit-box-shadow: 0 2px 2px 0 #C2C2C2;
+	box-shadow: 0 8px 8px 10px 		#00CC00;
+}

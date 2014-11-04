@@ -1,0 +1,131 @@
+#banner
+{
+	width:1300px;
+	height:50px;
+	background-color:#000;
+}
+#main
+{
+	height:600px;
+	width:1300px;
+        background-color: #2F2727; 
+	background-image: url(images/radial_bg.png);
+	background-position: center center;
+        background-repeat: no-repeat; 
+
+
+	 background: -webkit-gradient(radial, center center, 0, center center, 4	 60, from(#1a82f7), to(#2F2727));
+  	 background: -webkit-radial-gradient(circle, #1a82f7, #2F2727);
+	 background: -moz-radial-gradient(circle, #1a82f7, #2F2727);
+	 background: -ms-radial-gradient(circle, #1a82f7, #2F2727);
+}
+
+#top
+{
+	width:1300px;
+	height:50px;
+	background-color:#000000;
+}
+
+#left
+{
+	width:200px;
+	height:400px;
+	background-color:#aadd34;
+	float:left;
+}
+
+#secondleft
+{
+	width:900px;
+	height:400px;
+	float:left;
+	font-family:Lucida Console;
+	font-size:15px;
+	color:#FFFFFF;	
+}
+		
+
+
+#right
+{
+	width:200px;
+	height:400px;
+	background-color:#000000;
+	float:left;
+}
+#down
+{
+	width:1300px;
+	height:50px;
+	background-color:#000000;
+}
+#top a
+{
+	font-family:Lucida Console;
+	font-size:9px;
+	color:#FFFFFF;	
+}
+#top a:hover
+{
+	font-family:Lucida Console;
+	font-size:14px;
+	color:	#009900;
+}
+#articlebody
+{
+	 background: -webkit-gradient(radial, center center, 0, center center, 4	 60, from(	#660000), to(		#800000));
+  	 background: -webkit-radial-gradient(circle, 		#660000, 		#800000);
+	 background: -moz-radial-gradient(circle, 		#660000, 		#800000);
+	 background: -ms-radial-gradient(circle, 		#660000, 		#800000);
+	-moz-border-radius: 4px;
+         -webkit-border-radius: 4px;
+         border-radius: 4px;
+	-webkit-box-shadow: 0 2px 2px 0 #C2C2C2;
+	box-shadow: 0 15px 20px 25px 	#00CC00;
+	color:#FFFFFF;
+}
+#showmybaby
+{
+	font-family:Lucida Console;
+	font-size:15px;
+	color:#FFFFFF;
+	height:30px;
+	width:300px;
+	background-color:	#CC00CC;
+	box-shadow: inset 0px 0px 10px 0px #ABABAB,5px 5px 5px 1px #DDDDDD;
+	-webkit-box-shadow: inset 0px 0px 10px 0px #ABABAB,5px 5px 5px 1px #DDDDDD;
+	-moz-box-shadow: inset 0px 0px 10px 0px #ABABAB,5px 5px 5px 1px #DDDDDD;
+	-o-box-shadow: inset 0px 0px 10px 0px #ABABAB,5px 5px 5px 1px #DDDDDD;	
+	float:left;
+}
+
+a
+{
+	font-family:Lucida Console;
+	font-size:20px;
+	color:#FFFFFF;	
+}
+
+a:hover
+{
+	font-family:Lucida Console;
+	font-size:25px;
+	color:#FFFFFF;	
+}
+#img1
+{
+	float:right;
+}
+#img2
+{
+	float:right;
+}
+#img3
+{
+	float:right;
+}
+#mar:hover
+{
+
+}
