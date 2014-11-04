@@ -1,7 +1,5 @@
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="register.css" />
-</head>
+<head><link rel="stylesheet" type="text/css" href="browseteach.css" /></head>
 <body>
 <div id="banner">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="logo.jpg" width="200px" height="45px"/>
 <A HREF = logout.php>Log out</A>

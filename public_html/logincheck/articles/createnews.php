@@ -6,13 +6,15 @@
 <body>
 
 <div id="banner">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="logo.jpg" width="200px" height="45px"/>
+<A HREF = logout.php>Log out</A>
+<a href='//iamrana.com/index.php'>Login Page</a>&nbsp;&nbsp;&nbsp;<a href='//iamrana.com/logincheck/logincheck.php'>Home Page</a>
 </div>
 <div id="main">
 <div id="left"><br/><br/><br/><br/><br/><img src="WriteToUs.png" height="200px" width="300px"/></div>
 <div id="right">
 
 
-<form id="createnewsform" method="post" action="createnews.php">
+<form id="createnewsform" method="post" action="createteachbackend.php">
 
 <table id="tab" align="center">
 <tr>
@@ -20,7 +22,7 @@
 <LABEL for="articlename">Article Name: </LABEL>
 </td>
 <td>
-<INPUT type="text" id="articlename" required="required" placeholder="keyword for your baby"><BR>
+<input type="text" id="article" name="nameofarticle" required="required" placeholder="name of your baby"/><BR>
 </td>
 <td>
 <LABEL for="articletype">Article Type: </LABEL>
@@ -61,7 +63,7 @@
 <tr>
 <td colspan="5">
 <INPUT type="submit" id="publish" name="publish" value="publish!">&nbsp;&nbsp;
- <INPUT type="reset" id="reset" name="reset" id="reset" value="gun-do!">
+ <INPUT type="reset" id="reset" name="reset" id="reset" value="undo!">
 </td>
 </tr>
 </table>

@@ -1,0 +1,477 @@
+	
+Somedutta Ghosh
+	MinimizePop-outClose
+ 
+	
+ 
+	
+ 
+	 	
+  More ▼
+ Somedutta:  rana?
+ Sent at 1:07 PM on Monday
+ me:  na bhut
+ Somedutta:  ?
+ me:  nthng..
+comment ta kaj krche
+ Somedutta:  hm..great :)
+ me:  ekhn e cmplt krlm
+blo
+ Somedutta:  commnt er db structure ki?
+ me:  comment id articleid userid commenttime commentbody
+ Somedutta:  great :)
+comment er duto part e done?
+ie. saving new commit and shwing all commits under the article?
+ me:  duto part?
+yeah
+ Somedutta:  awesome :D
+ me:  ha duto hoeche
+ Somedutta:  tahole functionality wise r ki ki ache?
+ei page gulo jegulo accessible only to logged in users
+added a check thr je logged in ki na?
+ me:  ami thik bujhlam na
+ Somedutta:  ie.
+dhor ami login nakorei article er browse page ta khullam
+to what will i see currently?
+ me:  ha ota thik korini ekhno
+kikore krbo?
+session active ki check kore?
+ Somedutta:  hmm session die e korte hobe..
+session status akta dekhlam ager din remmbr?
+ me:  ha mne ache
+ Somedutta:  hmm otai ektu research kre dakh how its done..
+bt good going :)
+ me:  to session status jdi active hoe then ki r nahole then ki?
+ Somedutta:  on those lines yes..
+try it..
+ me:  achha shno
+ Somedutta:  akhon actually tor main functionality done tai to?
+ me:  amar main functionality>?
+:D
+ha mtamti done..kichu kichu baki
+oguloi kori
+ Somedutta:  mane articles browse, individual article er page, teacheing essential browse, individual teaching essential page, article page e comment kora
+all these are done right?
+ me:  ha sb e hoeche...bt ektu ektu fault ache kothaokothao
+oguloi thik korchi
+ Somedutta:  ok..
+ok..well tor ei basic gulo hoe gele next thing u shud do is permissions gulo dakha
+ke ki dekhte parbe
+ Sent at 1:18 PM on Monday
+ me:  ok.
+bye
+ Somedutta:  bye?
+ me:  sorry :)
+ Somedutta:  ki bolte thakishna...mathae dhoke na amar :)
+ok then..hlp lagle ping krish..
+ me:  hm
+ Sent at 1:21 PM on Monday
+ me:  hoe gche
+code is
+<?php
+session_start();
+if(!isset($_SESSION['userid'])){ //if login in session is not set
+   header("Location://iamrana.com/index.php");
+}
+?>
+ Somedutta:  cool :)
+ me:  ok
+ Somedutta:  to session start hotei session var e uiser id store korchish..
+and then when displaying the page u check the same
+ me:  :)
+wtf
+ Somedutta:  ?
+ me:  ?
+ Sent at 1:46 PM on Monday
+ me:  done
+ Somedutta:  ki done?
+ me:  ja bolecho
+access permissions
+ Somedutta:  :)
+tui akdom on a roll!
+good good..
+to ki ki perms dili?
+ me:  student sudhu browse krtepare news article
+teacher teaching article ar news article dutoi browse krte pare
+mane student er kache sudhu news article guloi avlbl thakbe
+ Somedutta:  ok..
+ me:  ar teacher kache dutoi
+ Somedutta:  to ami as a student login kore dhor directly teacher essential er browse page tae gelam
+what will i see?
+ me:  ar teacher jodi teaching article k private kore dae tbe seta other teachers der kacheo avlbl hbena
+tumi student hisabe login korle teaching article browse er option e pbena
+student sudhu browse news article e krte pare
+ Somedutta:  option na pelam but dhor i knw the url
+to ami dirctly oi url e jodi jai then?
+ me:  o ar ha..direct login na kore jekono link url e dile home page e chole asbe ar dekhabe better luck next time
+ Somedutta:  :)
+cool
+ me:  hm
+ Somedutta:  to jeta jigesh krchi
+ me:  ki?
+ Somedutta:  say i am astudnt and i knw the url for browseing teaching essentials
+so i drctly go to the url
+what will i see?
+ me:  test kre dkhe blchi
+ Somedutta:  ki howa uchit?
+ me:  haoa uchit na jete deoa
+ Somedutta:  mane?
+ me:  mane prevent kra uchit
+ Somedutta:  right..
+she list ta dekhte pabena
+access denied dekhechish kono site e?
+ me:  denied dekhachhi login page e..login page ta khule trpor oi page e better luck
+ Somedutta:  login page e denied hobena..user is already logged in right?
+eta dekhte pachish?
+https://github.com/sghosh9/hcl
+ me:  ekta kj kre ni
+ Somedutta:  dara age kotha ta complete hok tarpor to..
+:)
+dekhte pachish page ta?
+je link ta dilam?
+ me:  done
+sbkichu thikthak
+ Somedutta:  ki dne?
+ki thik thak?
+ me:  oi j student teching material dekhte cheye url likhle directed to index page
+ Somedutta:  wrong
+ me:  but student jodi logged in thake to
+seta alada
+bolte to dao
+age
+ Somedutta:  hmm
+ me:  logged in thakle tar homepage e redirect kre dbo
+?
+ Somedutta:  but i dnt want that..i want je take access denied dakhano hok
+je link ta dilam did u see that?
+ me:  dekhi darao
+ Somedutta:  hmm
+ me:  nice
+:)
+ Somedutta:  see the url?
+redirect kreche ki
+?
+ me:  ekta folder er index page e
+ Somedutta:  nana its that url only..
+kono redirect nei..
+ me:  o to?
+ Somedutta:  bas tui kichu onno jinish dekhchish ar ami access korle onno kichu dekhbo
+makes sense?
+ me:  eta kikore krbo?
+ Somedutta:  :)
+ me:  kora jbe bt.....
+ok
+ Somedutta:  achha bol redirect ta kikore kore chish?
+i access the url
+mane tor php file ta
+to okhane ki hochhe?
+ me:  okhane check krche session active ki..jodi hoe tbe php er kaj hoe redirected hochhe
+header location absolute url
+ Somedutta:  if(session)
+{show page}
+else
+{redirect}
+erom e to?
+ me:  yeah kinda
+ Somedutta:  to ebar jeta tui korbi sheta to ei line ei..
+just condition ta alada..
+ me:  mane else part deini kothao kothao
+just if check korechi
+ Somedutta:  as in?
+if no session then redirect erom?
+ me:  jodi session isset na hoe tbe
+erkm
+ Somedutta:  right..
+either way condition ta eithr false die judge kore redirect korchish ba true die judge kore page dakhachish r else e redirect...means the same thing right?
+ me:  ami ektu chesta kori
+?
+nahole bolbo
+ Somedutta:  hain nischoi...tui ektu bhab on these lines and then tell me ok?
+ me:  hm
+ Somedutta:  :)
+ Sent at 3:05 PM on Monday
+ me:  hoe gche
+jodi oi case ta hoe to student k dekhabe you are a student tai tomar permission nei
+if else die korechi
+ Somedutta:  ok..and checking by role..
+ me:  yeah
+ Somedutta:  role session var e na db fetch kre
+?
+ me:  session
+ Somedutta:  ok..
+interisting lagje to egulo ?
+:)
+ me:  na
+ Somedutta:  kano?
+ me:  emni
+ Somedutta:  u dnt think this is imp?
+ me:  next ki korte hbe ?
+ Somedutta:  permissions?
+ me:  explain kindly
+ Somedutta:  tor mone hoe na permissions are extrmly imp?
+ me:  yeah dats tru
+amar ki mne hlo doesnt mtr
+u jus tl me wht to do
+ Somedutta:  :) intrst pawa ta oboshoi dorkar
+net e kono site e egulo age face korishni?
+access denied stuff?
+ me:  yeah
+ Somedutta:  login korlei acces, ba conditional access?
+ me:  dekhechi
+try krar sahos hoeni
+ Somedutta:  r tokhn did u knw sheta kikore hoe?
+ me:  jantam egulo jara banae tara onk kiv=chu jane
+ar ami janina
+esb charo permissions blo
+ki ki korte hbe
+?
+ Somedutta:  akhn ki mone hoche?
+now that u knw how it wrks and u cn do it too?
+ me:  i did it  b4 a mnt
+guess so
+ Somedutta:  mane? age kore chish egulo?
+ me:  na
+blo ki ki korte hbe
+btw ami aj sbar age ofc esechi
+ Somedutta:  tor ato tara kisher...kotha bolchi let me complete atlst :)
+very good that is
+:)
+ me:  yeah
+ Somedutta:  ami bojhar cheshta korchi tor ei notun jinishta ta kore intsting kano laglona :)
+ me:  legeche bhalo
+ekhn thik ?
+nw tl plz
+ Somedutta:  :) zabardasti nei re ichu..bt intrst pelei to kaj e moja tai na..
+achha..
+ me:  yh
+u dnt knw me
+evrythn dfrnt here
+so stop all these and gimme sm task
+ Sent at 3:32 PM on Monday
+ Somedutta:  ok to browse er page e khali access add korechish?
+what if i am a student and i go to a teaching essential page
+?
+ Sent at 3:34 PM on Monday
+ me:  dekhabe j u r a student and students are not allowed to browse teaching materials
+ Somedutta:  ok..
+next what if i am a student or teahcer and i go to a article page but it is not public?
+ Sent at 3:37 PM on Monday
+ me:  when you are a teacher you can access  public teaching and public news
+when you r a student jus browse public news articles
+ Somedutta:  hmm
+ me:  when you r a teacher and you are the author of this private material you can access that material only
+no one else
+ Somedutta:  so i am a teacher and not the author OR i am a student r ami akta article er page e gelam jeta opublic na
+what will i see?
+behaviour ki hobe?
+ me:  you cant even go there
+ther's no way u can go
+url?
+ Somedutta:  y not?
+ me:  wont work
+ Somedutta:  yes i have the url
+wont work ?
+y not?'
+ me:  ek e php page e korechi
+with checking
+ Somedutta:  ak e php page? which one?
+ me:  browse teaching
+eta to teacher e krte pare ri8?
+ Somedutta:  browse page er article ta dakhabe?
+ Sent at 3:43 PM on Monday
+ me:  to teacher j private article ta create koreche sei article tar sathe creator er nam ache...tumi jkhn login krbe tkhn tomar session er sathe match korle tbei tmar private news show korbe
+otherwisw not
+private teach
+*
+ Somedutta:  eta hochhe list tae tai to?
+mane browse page bolchish?
+ me:  yh
+ Somedutta:  right..
+ me:  na dekhale explain korbo kikore
+ Somedutta:  but say akta erom situation ache
+akta article public chilo
+so i am teacher OR student
+and i know its url
+ me:  ok
+ Somedutta:  ebar article tar author otake private kore dilo
+but i still knw the url right?
+ebar ami ota access krle ki hobe?
+ki dekhte pabo?
+ me:  yeah and age jkhn public e chilo etao jano to or content tao janbe
+tai na?
+:D
+are tao hbena
+ Somedutta:  so what?
+content janar shathe ki ache
+ me:  oi j article er sathe primary key dile tbei to oi artcl pbe
+ Somedutta:  content change o hote pare nao hote pare..
+imp thing is its is private and it shudnt be seen
+bt i access it directly via url
+ me:  tai to
+ Somedutta:  ?
+ki tai?
+ me:  chaap
+wait bhabi
+ Sent at 3:49 PM on Monday
+ Somedutta:  bhab bhab :) open ur mind my child :D
+ me:  are ha
+ Sent at 3:51 PM on Monday
+ Somedutta:  ?
+ me:  are test krlam teacher hoe login kore then link ta copy korlam
+then logout kore link ta korlam index page e fire elo
+buttt
+butt
+buttt
+student hisabe login kore korte
+..
+:-/
+ Sent at 3:55 PM on Monday
+ Somedutta:  ki holo?
+ me:  bhebechi
+kre dekhi
+solve krte pari ki
+ Somedutta:  kor kor
+if u dnt mind amake ektu bol ki bhabli?
+:)
+ Sent at 3:57 PM on Monday
+ me:  jodi student hoe ar article jdi access private hoe to kichu message dkhabe
+ Somedutta:  hmm
+ me:  ki hmm
+ Somedutta:  r teacher
+?
+ me:  better ta blo
+ Somedutta:  theek e bolli :)
+r teacher jodi hoe je otar author na?
+ Sent at 4:25 PM on Monday
+ me:  ar teacher jodi hoe ar jodi otar creator er sathe current user er session na mele tbe bhagie die hbe
+ Somedutta:  same thing as student...show a message
+btw ud die match korchish to?
+*id
+ me:  last jeta bollam ekhn e eta ekhno korini
+id diei krte hbe
+ Somedutta:  hmm all good so far..
+i have a few more questions
+ me:  yh
+blo
+ Sent at 4:30 PM on Monday
+ Somedutta:  ok..
+so i am a teahcer and ami 2 artciel create korechi
+ me:  ok
+ Somedutta:  where will i be able to see these articles because browse articles e to khali public guloi dakhae right?
+ me:  oi nijer private article gulo er jnyo alada sql
+ Somedutta:  private article gulo ami othae dkehte pabo?
+ me:  ar oi block ta show hbe jhn creator/teacher login korbe
+ Somedutta:  theek bujhlam na..
+kon page e bolchish tui?
+ Sent at 4:34 PM on Monday
+ me:  oi browse page e teacher ra link pabe j njeder private gulo dekhar page er..
+oi next page e list ta dekhano..
+ Somedutta:  alada kore na ki akta list er moddhei sob?
+ me:  ar oi article page e condition die dbo je ekmatro current user er session er sathe private creator er id match korle tbei show krbe
+ Somedutta:  nana confusion hochhe
+ me:  alada
+ Somedutta:  oke browse articles er list page ache
+okhane sob public articles gulo listed right?
+ me:  yh
+ Somedutta:  ok..
+ me:  ar private dekhar jnyo teacher ekta link e click krbe
+ Somedutta:  so ami as akjon teacher dekhchi..and i have created 2 articles which are still private..
+achha ok..
+oi link e khali private articles which are created by current user tai to?
+ me:  then ogulo oi link ta te click krar por e dekhte pbe
+yh
+ Somedutta:  cool..
+ me:  ac cholchena
+ Somedutta:  :(
+dutoi?
+ me:  hot in here
+not cool
+jokin
+ Somedutta:  :)
+ me:  ar questions?
+ Somedutta:  achha to ei page tar, jekhane private articles dekhchi shetar perms ki ache?
+hmm ache to..
+:)
+ me:  oi page ta te age check hbe j user logged in ki..i mean sessions active kina
+ Somedutta:  hmm
+ me:  jodi ota hoe jae then check hbe j database e oi article er creator hisabe jar id ache tar id er sathe current session id match korche ki
+then show
+ Somedutta:  ar na thakle?
+ Sent at 4:44 PM on Monday
+ me:  na thakle ki korbo? this article is preserved by creator usage only
+ki odbhut english
+ Somedutta:  what if i am on that page as a student?
+ me:  ar student hole to kothai nei
+ghar dhore br kre deoa hbe
+ Somedutta:  :) access denied
+again
+ me:  ok
+ Sent at 4:47 PM on Monday
+ Somedutta:  ok..sob theek thak e mone hochhe..
+ me:  btw je qstns ekhn krcho egulor just answer e dichhi implement kra baki
+ Somedutta:  similar behaviour hobe for teahcing essentials
+ me:  kre nebo raat er mdhe
+ Somedutta:  :)
+kore fal tahole..
+ok..
+but
+aj befor going home push everything to gihub
+ami rate amar system e clone kore browse korbo site ta
+code check krbo
+ me:  ok to ota kal rate koro.... ajke rate ar kal saradine ei olpo koekta jeta baki ache seguli o cmplt kre ni
+aro kichu bugs berobe jani
+ogulo o
+then check koro
+ Somedutta:  she korte thak
+ me:  ar ami jani tumi amae bishas krona tai
+ Somedutta:  bt before u leave for home today i wnt all ur code in githu
+github
+ me:  ami jaoar age mukesh k dekhie jachhi
+ Sent at 4:51 PM on Monday
+ Somedutta:  ok..jst make sure u push everything to github..
+ me:  hm
+abar push korar jnyo pull korte hbe?
+ Somedutta:  na
+becoz u r the nly one wrking
+okhane to kono change e nei
+ me:  just add
+commit
+and push?
+naki sudhu push?
+ Somedutta:  u forgot..
+push what?
+commit object files right?
+ me:  hmm to add commit then push?
+ Somedutta:  exactly
+ me:  hm
+ar questions?
+ Somedutta:  na baki ami rate tor site ta amar local e set up kre dekhe nebo..
+btw database toire korar kono script likhechish ki?
+ me:  aj rate na kal rate
+ Somedutta:  aj rate dekhbo
+ me:  git khulchena
+:)
+ Somedutta:  github khulchena bol
+dsnt matr
+git will still wrk
+:)
+ me:  push krar shokti nei
+ok dstrb krbna bye
+lunch krbo ekhn
+ Somedutta:  ato late?
+ me:  emni emni
+ Somedutta:  kor kor..
+ me:  thak bari gie ekhbo ekhn khte bhalo lgbena
+ok bye
+mukesh k ekbr dekhie jchhi
+ Somedutta:  ok..
+push to github before u leave
+ me:  ami jachhina ekhn..
+ Somedutta:  hmm
+whenever u leave that is..
+ me:  kichu help lagle ping koro :)
+ Somedutta:  sure :P
+ me:  x-(
+ Sent at 4:59 PM on Monday
+ 
+

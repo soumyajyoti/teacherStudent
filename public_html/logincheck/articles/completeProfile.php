@@ -9,6 +9,8 @@
 session_start();
 ?>
 <div id="banner">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="logo.jpg" width="200px" height="45px"/>
+<A HREF = logout.php>Log out</A>
+<a href='//iamrana.com/index.php'>Login Page</a>&nbsp;&nbsp;&nbsp;<a href='//iamrana.com/logincheck/logincheck.php'>Home Page</a>
 </div>
 <div id="main" align="center">
 <div id="aa"><?php echo "Welcome to profile customization page ".$_SESSION["firstname"]." ".$_SESSION["lastname"] ?></div>
@@ -28,6 +30,18 @@ session_start();
 <div id="hh"><?php echo "Hey you are a "." ".$_SESSION["role"]." "."Thats cool..congrats!" ?></div>
 <div id="s"></div><div id="ss"></div>
 <div id="ii"><?php echo "And this is the userid we provide in order to track you."." ".$_SESSION["userid"]." "."M not gonna let you alter this value"; ?></div>
+<form action="combck.php" method="post">
+<table id="tab" align="center">
+<tr><td><p>&nbsp;&nbsp;Update  Your Details Here</p></td></tr>
+&nbsp;<tr><td><input type="text" id="firstname" name="firstname1" value="Enter Firstname"/></td></tr>
+<tr><td><input type="text" id="lastname" name="lastname1" value="Enter Lastname"/></td></tr>
+&nbsp;<tr><td><input type="password" id="password" name="password1" value="Enter Password"/></td></tr>
+
+&nbsp;
+<tr><td><input type="text" id="age" name="age1" value="Enter Age"/></td></tr>
+<tr><td> <input type="submit" id="butt" name="butt" value="Update Profile"  /></td></tr>
+</table>
+</form>
 </div>
 
 

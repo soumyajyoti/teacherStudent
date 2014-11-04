@@ -1,8 +1,15 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="logincheck.css"/>
+<meta charset=utf-8>
+<meta name="viewport" content="width=620">
+
+<link rel="stylesheet" href="css/html5demos.css">
+<script src="js/h5utils.js"></script>
 </head>
 <body vlink="#ffff00" alink="#ffff00" link="#ffff00">
+
+
 <?php
 
 $host="localhost"; // Host name
@@ -102,19 +109,45 @@ echo "<div id='holder'>";
 echo "<br/>"."<br/>"."<br/>";
 if ( $code == 'teacher' ) 
 {
+
+
+
 	echo "<TABLE CELLPADDING=4>
+<tr><th></th><th></th></tr>
+<tr>
+<th><a href='//iamrana.com/index.php'>Login Page</a></th>
+<th><a href='//iamrana.com/logincheck/logincheck.php'>Home Page</a></th>
+<th><a href='http://iamrana.com/logincheck/articles/createnews.php'>Create News Article</a></th>
+<th><a href='http://iamrana.com/logincheck/articles/browsenews.php'>Browse News Article</a></th>
+<th><a href='http://iamrana.com/logincheck/articles/createteach.php'>Create Teaching Article</a></th>
+<th><a href='http://iamrana.com/logincheck/articles/browseteach.php'>Browse Teaching Articles</a></th>
+</tr>
+<tr><td><A HREF = 'logout.php'>Log out</A></td></tr>
 <TR> <TH COLSPAN=6>Hi Teacher..PLease Checkout Following Links </TH> </TR>
 <TR> <TD> <a href='articles/createnews.php'><img src='createnews.png' alt='complete profile' height='150' width='150'> </a></TD>      <TD><a href='articles/createnews.php'>Create News-Article</a></TD>
  <TD><a href='articles/browsenews.php'><img src='browsenews.png' alt='complete profile' height='150' width='150'></a></TD>     <TD><a href='articles/browsenews.php'>Browse News-Articles</a></TD> 
 <TD><a href='articles/createteach.php'><img src='createteach.png' alt='specific work' height='150' width='150'></a></TD>      <TD><a href='articles/createteach.php'>Create Teaching-Material</a></TD>
-<TD><a href='articles/browseteach.php'><img src='browseteach.png' alt='specific work' height='150' width='150'></a></TD>      <TD><a href='articles/browseteach.php'>Browse Teaching-Materials</a></TD> </TR></TABLE>";
+<TD><a href='articles/browseteach.php'><img src='browseteach.png' alt='specific work' height='150' width='150'></a></TD>      <TD><a href='articles/browseteach.php'>Browse Teaching-Materials</a></TD> </TR>
+
+</TABLE>";
 
 
 	
 }
 else 
 {
+	
 	echo "<TABLE CELLPADDING=4>
+<tr><th></th></tr>
+<tr>
+<th><a href='//iamrana.com/index.php'>Login Page</a></th>
+<th><a href='//iamrana.com/logincheck/logincheck.php'>Home Page</a></th>
+<th><a href='http://iamrana.com/logincheck/articles/completeProfile.php'>Complete Profile</a></th>
+<th><a href='http://iamrana.com/logincheck/articles/browsenews.php'>Browse News Articles</a></th>
+</tr>
+
+
+<tr><td><A HREF = logout.php>Log out</A></td></tr>
 <TR> <TH COLSPAN=6>Hi Student..PLease Checkout Following Links </TH> </TR>
 <TR> <TD> <a href='completeProfile.php'><img src='complete.png' alt='complete profile' height='150' width='150'> </a></TD>      <TD><a href='articles/completeProfile.php'>Complete Profile</a></TD>
  <TD><a href='articles/browseteach.php'><img src='book-pile.png' alt='complete profile' height='150' width='150'></a></TD>     <TD><a href='articles/browsenews.php'>Bowse News-Articles</a></TD> 
@@ -149,5 +182,77 @@ else {
 //echo "</div>";
 }
 ?>
+    <header>
+      <h5>geolocation@stolenbyrana</h5>
+    </header>
+<meta name="viewport" content="width=620" />
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <article>
+      <p>Finding your location: <span id="status">kaka ektu wait koro...</span></p>
+    </article>
+<script>
+function success(position) {
+  var s = document.querySelector('#status');
+  
+  if (s.className == 'success') {
+    // not sure why we're hitting this twice in FF, I think it's to do with a cached result coming back    
+    return;
+  }
+  
+  s.innerHTML = "found you rana!";
+  s.className = 'success';
+  
+  var mapcanvas = document.createElement('div');
+  mapcanvas.id = 'mapcanvas';
+  mapcanvas.style.height = '400px';
+  mapcanvas.style.width = '560px';
+    
+  document.querySelector('article').appendChild(mapcanvas);
+  
+  var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+  var myOptions = {
+    zoom: 15,
+    center: latlng,
+    mapTypeControl: false,
+    navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  var map = new google.maps.Map(document.getElementById("mapcanvas"), myOptions);
+  
+  var marker = new google.maps.Marker({
+      position: latlng, 
+      map: map, 
+      title:"You are here! (at least within a "+position.coords.accuracy+" meter radius)"
+  });
+}
+
+function error(msg) {
+  var s = document.querySelector('#status');
+  s.innerHTML = typeof msg == 'string' ? msg : "failed";
+  s.className = 'fail';
+  
+  // console.log(arguments);
+}
+
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(success, error);
+} else {
+  error('not supported');
+}
+
+</script>
+     
+</section>
+<script src="js/prettify.packed.js"></script>
+<script>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script>
+try {
+var pageTracker = _gat._getTracker("UA-1656750-18");
+pageTracker._trackPageview();
+} catch(err) {}</script>
 </body>
 </html>

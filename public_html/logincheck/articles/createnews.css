@@ -19,6 +19,19 @@
 	 background: -moz-radial-gradient(circle, #1a82f7, #2F2727);
 	 background: -ms-radial-gradient(circle, #1a82f7, #2F2727);
 }
+
+#banner a
+{
+	font-family:Lucida Console;
+	font-size:15px;
+	color:#FFFFFF;	
+}
+#banner a:hover
+{
+	font-family:Lucida Console;
+	font-size:18px;
+	color:#5678aa;	
+}
 #left
 {
 	width:300px;

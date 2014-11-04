@@ -1,13 +1,23 @@
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="register.css" />
+<title>News-article</title>
+<link rel="stylesheet" type="text/css" href="article.css" />
 </head>
 <body>
-<div id="banner">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="logo.jpg" width="200px" height="45px"/>
-<A HREF = logout.php>Log out</A>
-</div>
-<div id="main">
 <?php
+session_start();
+?>
+<div id="banner">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="logo.jpg" width="200px" height="45px"/>
+<A HREF ="logout.php">Log out</A>
+</div>
+<div id="main" align="center">
+<?php
+$rana= $_GET["rana"];
+echo $ana;
+?>
+<?php
+$u=$_SESSION["userid"];
+$combo = $_POST['combo'];
 $con=mysql_connect('localhost','root','gc085475');
 // Check connection
 if (mysqli_connect_errno()) {
@@ -15,12 +25,9 @@ if (mysqli_connect_errno()) {
 } 
 mysql_select_db('teacherStudent',$con);
 	
-	$firstname =  $_POST['firstname'];
-	$lastname = $_POST['lastname'];
-	$email = $_POST['email'];
-	$password= $_POST['password'];
-	$role = $_POST['role'];
-	$age =  $_POST['age'];
+	
+	$dat=date("Y/m/d H:i:s");
+	echo $combody;
 	
 
 //$crypted_pass = crypt($password);
@@ -36,8 +43,8 @@ mysql_select_db('teacherStudent',$con);
 
 
 
-$sql="INSERT INTO user (firstname,lastname,email,password,role,age)
-VALUES ('$firstname', '$lastname', '$email','$password','$role', '$age')";
+$sql="INSERT INTO comment (articleid,userid,commentdate,commentbody)
+VALUES ('$rana', '$u', '$dat','$combo')";
 $res=mysql_query($sql);
 if($res)
 {
@@ -49,5 +56,5 @@ echo "1 record added";
 mysqli_close($con);
 ?>
 </div>
-	</body>
+</body>
 </html>

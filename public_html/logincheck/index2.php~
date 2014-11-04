@@ -3,9 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
-<scriptype="text/javascript">
-</SCRIPT>
 <link rel="stylesheet" type="text/css" href="index.css" />
 </head>
 <style>
@@ -21,7 +18,7 @@
 <table id="tab" align="center">
 <tr><td><p>&nbsp;&nbsp;Please complete your details</p></td></tr>
 &nbsp;<tr><td><input type="text" id="firstname" name="firstname" value="Enter Firstname" required="required" />&nbsp;<input type="text" id="lastname" name="lastname" value="Enter Lastname" required="required" /></td></tr>
-&nbsp;<tr><td><input type="email" id="email" name="email" value="Enter Email Id" required="required" /><span id="availability_status"></span></td></tr>
+&nbsp;<tr><td><input type="email" id="email" name="email" value="Enter Email Id" required="required" /></td></tr>
 &nbsp;<tr><td><input type="password" id="password" name="password" value="Enter Password" required="required" /></td></tr>
 
 &nbsp;<tr>
@@ -40,8 +37,9 @@
 </div>
 </center>
 </form>
+<div id="error"><marquee behavior="alternate" scrollamount="4" direction="left">Better Luck Next Time</marquee></div></br>
 <div id="signin">
-<form action="logincheck/logincheck.php" method="post">
+<form action="logincheck.php" method="post">
 
 <p id="signinquote">Existing User LogIn</p>
 <input type="email" name="myusername" placeholder="Write email" />

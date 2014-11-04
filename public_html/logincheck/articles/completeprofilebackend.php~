@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>edit profile</title>
+<link rel="stylesheet" type="text/css" href="completeProfilebackend.css" />
+</head>
+<body>
+<div id="banner">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="logo.jpg" width="200px" height="45px"/>
+<A HREF = logout.php>Log out</A>
+<a href='//iamrana.com/index.php'>Login Page</a>&nbsp;&nbsp;&nbsp;<a href='//iamrana.com/logincheck/logincheck.php'>Home Page</a>
+</div>
+<div id="main" align="center">
+<?php
+
+session_start();
+echo $_SESSION['email'];
+$con=mysql_connect('localhost','root','gc085475');
+if (mysqli_connect_errno()) {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+mysql_select_db('teacherStudent',$con);
+
+	$firstname1 =  $_POST['firstname'];
+	$lastname1 = $_POST['lastname'];
+	$password1= $_POST['password'];
+	$age1 =  $_POST['age']; 
+
+
+
+
+
+$sql="UPDATE user SET firstname=$firstname1 , lastname=$lastname1 , password=$password1 , age=$age1 WHERE email=$_SESSION['email']";
+$res=mysql_query($sql,$con);
+if($res)
+{
+	echo "inserted successfully "."<br/>";
+}
+
+echo "1 record added";
+
+mysqli_close($con);
+?>
+</div>
+</body>
+</html>
