@@ -5,54 +5,6 @@
 <title>Untitled Document</title>
 <link rel="stylesheet" type="text/css" href="index.css" />
 </head>
-<script type="text/javascript">
-
-function Submit(){
- var emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z]*\.[A-Za-z]{2,5}$/;
- var fname = document.form.firstame.value,
-  lname = document.getElementById("lastname").value,
-  femail = document.form.email.value,
-  fpassword = document.form.password.value;
-   
- if( fname == "" )
-   {
-     document.form.Name.focus() ;
-  alert("Enter your firstname");
-     return false;
-   }
- if( lname == "" )
-   {
-     document.form.LastName.focus() ;
-   alert("Enter your firstname");
-     return false;
-   }
-    
-   if (femail == "" )
- {
-  document.form.Email.focus();
-  alert("Enter your firstname");
-  return false;
-  }else if(!emailRegex.test(femail)){
-  document.form.Email.focus();
-  alert("Don't F*** please,Enter a valid email");
-  return false;
-  }
-   
-   
- if(fpassword == "")
-  {
-   document.form.Password.focus();
-   alert("Enter your password");
-   return false;
-  }
-  if(fname != '' && lname != '' && femail != '' && fpassword != ''){
-   alert("form submitted successfully");
-   }
-     
-}
-
-
-</script>
 <style>
 
 </style>
@@ -62,7 +14,7 @@ function Submit(){
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="logo.jpg" width="200px" height="45px" id="imgg" />
 </div>
 <div id="lower">
-<form action="register.php" method="post" onsubmit="Submit()">
+<form action="register.php" method="post">
 <table id="tab" align="center">
 <tr><td><p>&nbsp;&nbsp;Please complete your details</p></td></tr>
 &nbsp;<tr><td><input type="text" id="firstname" name="firstname" value="Enter Firstname" required="required" />&nbsp;<input type="text" id="lastname" name="lastname" value="Enter Lastname" required="required" /></td></tr>

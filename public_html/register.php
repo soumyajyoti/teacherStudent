@@ -33,7 +33,16 @@ mysql_select_db('teacherStudent',$con);
 //}
 
 
-
+$sql=mysql_query("SELECT * FROM user WHERE email='$email'");
+ if(mysql_num_rows($sql)>=1)
+   {
+    echo "emailid already exists ..sorry";
+	mysqli_close($con);
+   }
+ else
+    {
+   
+    
 
 
 $sql="INSERT INTO user (firstname,lastname,email,password,role,age)
@@ -41,10 +50,11 @@ VALUES ('$firstname', '$lastname', '$email','$password','$role', '$age')";
 $res=mysql_query($sql);
 if($res)
 {
-	echo "inserted successfully "."<br/>";
+	echo "inserted successfully ..you profile created"."<br/>";
 }
 
 echo "1 record added";
+}
 
 mysqli_close($con);
 ?>

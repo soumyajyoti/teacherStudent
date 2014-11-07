@@ -9,8 +9,9 @@
 </head>
 <body vlink="#ffff00" alink="#ffff00" link="#ffff00">
 
-
 <?php
+
+
 
 $host="localhost"; // Host name
 $username="root"; // Mysql username
@@ -104,9 +105,12 @@ while($row = mysql_fetch_array($result, MYSQL_ASSOC))
 }
 echo "</div>";*/
 
+
+
 echo "<div id='holder'>";
 
 echo "<br/>"."<br/>"."<br/>";
+
 if ( $code == 'teacher' ) 
 {
 
@@ -181,6 +185,7 @@ else {
 	header("location:index2.php");
 //echo "</div>";
 }
+
 ?>
     <header>
       <h5>geolocation@stolenbyrana</h5>

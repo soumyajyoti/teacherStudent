@@ -4,7 +4,17 @@
 <link rel="stylesheet" type="text/css" href="createnews.css" />
 </head>
 <body>
-
+<?php
+session_start();
+if(!isset($_SESSION['userid'])){ //if login in session is not set
+    header("Location://iamrana.com/index.php");
+}
+if($_SESSION['role']=='student')
+{
+	echo "ERROR: You are not allowed to create teaching articles. ";
+	header("Location://iamrana.com/index.php");	
+}
+?>
 <div id="banner">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="logo.jpg" width="200px" height="45px"/>
 <A HREF = logout.php>Log out</A>
 <a href='//iamrana.com/index.php'>Login Page</a>&nbsp;&nbsp;&nbsp;<a href='//iamrana.com/logincheck/logincheck.php'>Home Page</a>
@@ -31,21 +41,21 @@
 <input type="radio" id="teachingarticle" name="articletype" value="teachingarticle"/>Teaching-Essential
 </td>
 <td>
-<input type="radio" id="newsarticle" name="articletype" value="newsarticle" />&nbsp;News-Article<BR>
+<input type="radio" id="newsarticle" name="articletype" value="newsarticle" checked="checked" />&nbsp;News-Article<BR>
 </td>
 </tr>
 <tr>
 <td>    
-<LABEL for="creationtime">Creation Time: </LABEL>
+
 </td>
 <td>
-<INPUT type="text" id="creationtime" name="creationtime" required="required" placeholder="what time is it?">
+
 </td>
 <td>
 <LABEL for="access">Access Criteria: </LABEL>
 </td>
 <td>
-<input type="radio" id="teachingarticle" name="access" value="public" />&nbsp;Public
+<input type="radio" id="teachingarticle" name="access" value="public" checked="checked" />&nbsp;Public
 </td>
 <td>
 <input type="radio" id="newsarticle" name="access" value="private" />&nbsp;Private<BR>

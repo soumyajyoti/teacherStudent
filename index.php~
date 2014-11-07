@@ -4,21 +4,49 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
 <script type="text/javascript">
-function ValidateRegistration()
+  function Submit()
 {
-    //username block
-    var firstname=document.forms["registerForm"]["firstname"].value;
-    if (firstname==null || username==" ")
-    {
-        alert("You must provide a firstname");
-        return false;
-    }       
-    if (firstname.length>20 || firstname.length<1)
-    {
-        alert("Sorry, your firstname must be between 1 and 20 characters long.");
-        return false;
-    }
-    //etc....
+ var emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z]*\.[A-Za-z]{2,5}$/;
+ var fname = document.getElementById("firsttname").value;
+  var lname = document.getElementById("lastname").value;
+  var femail = document.getElementById("email").value;
+  var fpassword = document.getElementById("password").value;
+   
+ if( fname == "" )
+   {
+     document.form.firstame.focus() ;
+  alert("Enter your firstname");
+     return false;
+   }
+ if( lname == "" )
+   {
+     document.form.lastName.focus() ;
+   alert("Enter your lastname");
+     return false;
+   }
+    
+   if (femail == "" )
+ {
+  document.form.email.focus();
+  alert("Enter your email");
+  return false;
+  }else if(!emailRegex.test(femail)){
+  document.form.email.focus();
+  alert("Don't F*** please,Enter a valid email");
+  return false;
+  }
+   
+   
+ if(fpassword == "")
+  {
+   document.form.password.focus();
+   alert("Enter your password");
+   return false;
+  }
+  if(fname != '' && lname != '' && femail != '' && fpassword != ''){
+   alert("form submitted successfully");
+   }
+     
 }
 </script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
@@ -82,7 +110,7 @@ return false;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="logo.jpg" width="200px" height="45px" id="imgg" />
 </div>
 <div id="lower">
-<form action="register.php" method="post" onsubmit = "return ValidateRegistration()">
+<form action="register.php" method="post" onsubmit="return Submit()">
 <table id="tab" align="center">
 <tr><td><p>&nbsp;&nbsp;Please complete your details</p></td></tr>
 &nbsp;<tr><td><input type="text" id="firstname" name="firstname" placeholder="Enter Firstname" />&nbsp;<input type="text" id="lastname" name="lastname" placeholder="Enter Lastname" /></td></tr>

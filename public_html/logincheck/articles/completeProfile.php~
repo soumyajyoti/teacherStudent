@@ -5,6 +5,12 @@
 </head>
 <body>
 <?php
+session_start();
+if(!isset($_SESSION['userid'])){ //if login in session is not set
+    header("Location://iamrana.com/index.php");
+}
+?>
+<?php
 
 session_start();
 ?>
@@ -30,10 +36,6 @@ session_start();
 <div id="hh"><?php echo "Hey you are a "." ".$_SESSION["role"]." "."Thats cool..congrats!" ?></div>
 <div id="s"></div><div id="ss"></div>
 <div id="ii"><?php echo "And this is the userid we provide in order to track you."." ".$_SESSION["userid"]." "."M not gonna let you alter this value"; ?></div>
-</div>
-<div id="holder">
-
-
 <form action="combck.php" method="post">
 <table id="tab" align="center">
 <tr><td><p>&nbsp;&nbsp;Update  Your Details Here</p></td></tr>
@@ -47,6 +49,7 @@ session_start();
 </table>
 </form>
 </div>
+
 
 
 </body>

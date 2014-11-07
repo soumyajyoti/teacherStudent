@@ -9,8 +9,9 @@
 </head>
 <body vlink="#ffff00" alink="#ffff00" link="#ffff00">
 
-
 <?php
+
+
 
 $host="localhost"; // Host name
 $username="root"; // Mysql username
@@ -104,9 +105,14 @@ while($row = mysql_fetch_array($result, MYSQL_ASSOC))
 }
 echo "</div>";*/
 
+if( !isset($_SESSION["userid"]) ){
+    echo "session expired"
+}
+
 echo "<div id='holder'>";
 
 echo "<br/>"."<br/>"."<br/>";
+
 if ( $code == 'teacher' ) 
 {
 
@@ -143,7 +149,7 @@ else
 <th><a href='//iamrana.com/index.php'>Login Page</a></th>
 <th><a href='//iamrana.com/logincheck/logincheck.php'>Home Page</a></th>
 <th><a href='http://iamrana.com/logincheck/articles/completeProfile.php'>Complete Profile</a></th>
-<th><a href='http://iamrana.com/logincheck/articles/browseteach.php'>Browse Teaching Articles</a></th>
+<th><a href='http://iamrana.com/logincheck/articles/browsenews.php'>Browse News Articles</a></th>
 </tr>
 
 
@@ -181,6 +187,7 @@ else {
 	header("location:index2.php");
 //echo "</div>";
 }
+
 ?>
     <header>
       <h5>geolocation@stolenbyrana</h5>

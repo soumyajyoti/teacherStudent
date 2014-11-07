@@ -1,6 +1,6 @@
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="browseteach.css" />
+<link rel="stylesheet" type="text/css" href="register.css" />
 </head>
 <body>
 <div id="banner">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="logo.jpg" width="200px" height="45px"/>
@@ -33,7 +33,15 @@ mysql_select_db('teacherStudent',$con);
 //}
 
 
-
+$sql=mysql_query("SELECT * FROM user WHERE email='$email'");
+ if(mysql_num_rows($sql)>=1)
+   {
+    echo "emailid already exists ..sorry";
+   }
+ else
+    {
+   //insert query goes here
+    
 
 
 $sql="INSERT INTO user (firstname,lastname,email,password,role,age)
@@ -41,10 +49,11 @@ VALUES ('$firstname', '$lastname', '$email','$password','$role', '$age')";
 $res=mysql_query($sql);
 if($res)
 {
-	echo "inserted successfully "."<br/>";
+	echo "inserted successfully ..you profile created"."<br/>";
 }
 
 echo "1 record added";
+}
 
 mysqli_close($con);
 ?>

@@ -4,7 +4,12 @@
 <link rel="stylesheet" type="text/css" href="browseteach.css" />
 </head>
 <body>
-
+<?php
+session_start();
+if(!isset($_SESSION['userid'])){ //if login in session is not set
+    header("Location://iamrana.com/index.php");
+}
+?>
 <div id="banner">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="logo.jpg" width="200px" height="45px"/>
 <A HREF = logout.php>Log out</A>
 <a href='//iamrana.com/index.php'>Login Page</a>&nbsp;&nbsp;&nbsp;<a href='//iamrana.com/logincheck/logincheck.php'>Home Page</a>

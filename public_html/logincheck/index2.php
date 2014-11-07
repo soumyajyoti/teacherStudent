@@ -17,9 +17,9 @@
 <form action="register.php" method="post">
 <table id="tab" align="center">
 <tr><td><p>&nbsp;&nbsp;Please complete your details</p></td></tr>
-&nbsp;<tr><td><input type="text" id="firstname" name="firstname" value="Enter Firstname" required="required" />&nbsp;<input type="text" id="lastname" name="lastname" value="Enter Lastname" required="required" /></td></tr>
-&nbsp;<tr><td><input type="email" id="email" name="email" value="Enter Email Id" required="required" /></td></tr>
-&nbsp;<tr><td><input type="password" id="password" name="password" value="Enter Password" required="required" /></td></tr>
+&nbsp;<tr><td><input type="text" id="firstname" name="firstname" placeholder="Enter Firstname" required="required" />&nbsp;<input type="text" id="lastname" name="lastname" placeholder="Enter Lastname" required="required" /></td></tr>
+&nbsp;<tr><td><input type="email" id="email" name="email" placeholder="Enter Email Id" required="required" /></td></tr>
+&nbsp;<tr><td><input type="password" id="password" name="password" placeholder="Enter Password" required="required" /></td></tr>
 
 &nbsp;<tr>
 <td><label for="role">Choose your Role</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="role" name="role" value="teacher" />&nbsp;Teacher&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="role" name="role" value="student" />&nbsp;Student</td>
@@ -27,7 +27,7 @@
 
 </tr>
 
-&nbsp;<tr><td><input type="text" id="age" name="age" value="Enter Age" required="required" /></td></tr>
+&nbsp;<tr><td><input type="text" id="age" name="age" placeholder="Enter Age" required="required" /></td></tr>
 
 </table>
 <center>

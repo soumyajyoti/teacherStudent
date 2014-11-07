@@ -5,6 +5,12 @@
 </head>
 <body>
 <?php
+session_start();
+if(!isset($_SESSION['userid'])){ //if login in session is not set
+    header("Location://iamrana.com/index.php");
+}
+?>
+<?php
 
 session_start();
 ?>
